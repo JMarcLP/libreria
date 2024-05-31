@@ -11,18 +11,16 @@ public class Factura {
 	private double totalNeto;
 	private double iva;
 	private double total;
-	private int idCliente;
+	private Cliente cliente;
 	
 		//constructores
-		public Factura(int idFactura, String numFactura, Date fecha, double totalNeto, double iva, double total,
-			int idCliente) {
+		public Factura(int idFactura, String numFactura, Date fecha, double totalNeto, double iva, double total) {
 		this.idFactura = idFactura;
 		this.numFactura = numFactura;
 		this.fecha = fecha;
 		this.totalNeto = totalNeto;
 		this.iva = iva;
 		this.total = total;
-		this.idCliente = idCliente;
 	}
 
 		//metodos getters and setters
@@ -73,21 +71,21 @@ public class Factura {
 		public void setTotal(double total) {
 			this.total = total;
 		}
+		
 
-		public int getIdCliente() {
-			return idCliente;
+		public Cliente getCliente() {
+			return cliente;
 		}
 
-		public void setIdCliente(int idCliente) {
-			this.idCliente = idCliente;
+		public void setCliente(Cliente cliente) {
+			this.cliente = cliente;
 		}
-
-		//to string
+		
+		//metodo to string
 		@Override
 		public String toString() {
 			return "Factura [idFactura=" + idFactura + ", numFactura=" + numFactura + ", fecha=" + fecha
-					+ ", totalNeto=" + totalNeto + ", iva=" + iva + ", total=" + total + ", idCliente=" + idCliente
-					+ "]";
+					+ ", totalNeto=" + totalNeto + ", iva=" + iva + ", total=" + total + ", cliente=" + cliente + "]";
 		}
 	
 		

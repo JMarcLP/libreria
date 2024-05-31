@@ -19,13 +19,13 @@ public class Libro {
 	private String portada;
 	private String presentacion;
 	private double precio;
-	private int idAutor;
-	private int idCategoria;
+	private Autor autor;
+	private Categoria categoria;
 	
 	//constructores
 	public Libro(int idLibro, String titutlo, String editorial, int numPaginas, String edicion, String idioma,
 			Date fechaPublicacion, String descripcion, String tipoPasta, String isbn, String numEjemplares,
-			String portada, String presentacion, double precio, int idAutor, int idCategoria) {
+			String portada, String presentacion, double precio) {
 		this.idLibro = idLibro;
 		this.titutlo = titutlo;
 		this.editorial = editorial;
@@ -40,8 +40,7 @@ public class Libro {
 		this.portada = portada;
 		this.presentacion = presentacion;
 		this.precio = precio;
-		this.idAutor = idAutor;
-		this.idCategoria = idCategoria;
+
 	}
 
 	//metodos getters and setters
@@ -157,30 +156,29 @@ public class Libro {
 		this.precio = precio;
 	}
 
-	public int getIdAutor() {
-		return idAutor;
+	public Autor getAutor() {
+		return autor;
 	}
 
-	public void setIdAutor(int idAutor) {
-		this.idAutor = idAutor;
+	public void setAutor(Autor autor) {
+		this.autor = autor;
 	}
 
-	public int getIdCategoria() {
-		return idCategoria;
+	public Categoria getCategoria() {
+		return categoria;
 	}
 
-	public void setIdCategoria(int idCategoria) {
-		this.idCategoria = idCategoria;
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
-	//to string
 	@Override
 	public String toString() {
 		return "Libro [idLibro=" + idLibro + ", titutlo=" + titutlo + ", editorial=" + editorial + ", numPaginas="
 				+ numPaginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fechaPublicacion=" + fechaPublicacion
 				+ ", descripcion=" + descripcion + ", tipoPasta=" + tipoPasta + ", isbn=" + isbn + ", numEjemplares="
 				+ numEjemplares + ", portada=" + portada + ", presentacion=" + presentacion + ", precio=" + precio
-				+ ", idAutor=" + idAutor + ", idCategoria=" + idCategoria + "]";
+				+ ", autor=" + autor + ", categoria=" + categoria + "]";
 	}
 	
 	

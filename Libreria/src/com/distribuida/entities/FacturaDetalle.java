@@ -6,16 +6,14 @@ public class FacturaDetalle {
 	private int idFacturaDetalle;
 	private int cantidad;
 	private double subtotal;
-	private int idFactura;
-	private int idLibro;
+	private Factura factura;
+	private Libro libro;
 	
 	//constructores
-	public FacturaDetalle(int idFacturaDetalle, int cantidad, double subtotal, int idFactura, int idLibro) {
+	public FacturaDetalle(int idFacturaDetalle, int cantidad, double subtotal) {
 		this.idFacturaDetalle = idFacturaDetalle;
 		this.cantidad = cantidad;
 		this.subtotal = subtotal;
-		this.idFactura = idFactura;
-		this.idLibro = idLibro;
 	}
 
 	//metodos getters and setters
@@ -42,28 +40,27 @@ public class FacturaDetalle {
 	public void setSubtotal(double subtotal) {
 		this.subtotal = subtotal;
 	}
-
-	public int getIdFactura() {
-		return idFactura;
+	
+	public Factura getFactura() {
+		return factura;
 	}
 
-	public void setIdFactura(int idFactura) {
-		this.idFactura = idFactura;
+	public void setFactura(Factura factura) {
+		this.factura = factura;
 	}
 
-	public int getIdLibro() {
-		return idLibro;
+	public Libro getLibro() {
+		return libro;
 	}
 
-	public void setIdLibro(int idLibro) {
-		this.idLibro = idLibro;
+	public void setLibro(Libro libro) {
+		this.libro = libro;
 	}
 
-	//to string
 	@Override
 	public String toString() {
 		return "FacturaDetalle [idFacturaDetalle=" + idFacturaDetalle + ", cantidad=" + cantidad + ", subtotal="
-				+ subtotal + ", idFactura=" + idFactura + ", idLibro=" + idLibro + "]";
+				+ subtotal + ", factura=" + factura + ", libro=" + libro + "]";
 	}
 
 }
