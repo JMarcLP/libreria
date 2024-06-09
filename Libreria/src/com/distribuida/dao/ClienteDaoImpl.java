@@ -1,9 +1,7 @@
 package com.distribuida.dao;
 
 import java.util.List;
-
 import javax.transaction.Transactional;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +24,6 @@ public class ClienteDaoImpl implements ClienteDao {
 		
 		Session session = sessionFactory.getCurrentSession();
 		return session.createQuery("form Cliente",Cliente.class).getResultList();
-		
-		
-		
 	}
 
 	@Override
