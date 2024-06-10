@@ -22,7 +22,7 @@ public class CategoriaDaoImpl implements CategoriaDao {
 	public List<Categoria> findAll() {
 		
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("form Categoria",Categoria.class).getResultList();
+		return session.createQuery("from Categoria",Categoria.class).getResultList();
 	}
 
 	@Override
