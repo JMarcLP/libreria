@@ -23,7 +23,7 @@ public class ClienteDaoImpl implements ClienteDao {
 	public List<Cliente> findAll() {
 		
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("form Cliente",Cliente.class).getResultList();
+		return session.createQuery("from Cliente",Cliente.class).getResultList();
 	}
 
 	@Override
